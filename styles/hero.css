@@ -1,0 +1,71 @@
+.hero {
+    width: 90rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    & .header {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        width: 70rem;
+
+        & img {
+            height: 3.625rem;
+        }
+
+        & nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 3.5rem;
+
+            button.primary {
+                padding: 0.75rem 1.25rem;
+            }
+        }
+        & .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            & h1 {
+                max-width: 41rem;
+                font: var(--title-lg);
+
+                animation: fadeIn 3s ease;
+            }
+            & p {
+                font: 500 1.25/140% var(--ff);
+                text-align: center;
+                width: 25rem;
+                opacity: 0;
+
+                animation: fadeIn 2s 1s linear forwards;
+            }
+        }
+    }
+
+    & > img {
+        inset: 0;
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+
+        animation: fadeIn 3s ease-in;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

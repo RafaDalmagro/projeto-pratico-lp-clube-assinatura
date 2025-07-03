@@ -1,63 +1,96 @@
-*, *::after, *::before{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
-	font-family: "Raleway", sans-serif;
-	letter-spacing: 0;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0;
 
-	color: var(--text-body);
+    color: var(--text-body);
 }
 
-:root{
-	--pink-light: #c59dd2;
-	--pink-base: #9547a5;
-	--pink-dark: #3f0f41;
-	--pink-low: #3f0f41;
+:root {
+    --pink-light: #c59dd2;
+    --pink-base: #9547a5;
+    --pink-dark: #7D298A;
+    --pink-low: #3f0f41;
 
-	--blue-light: #73b6d2;
-	--blue-base: #358bb9;
-	--blue-mid: #2374a4;
-	--blue-dark: #144a72;
-	--blue-low: #08233c;
+    --blue-light: #73b6d2;
+    --blue-base: #358bb9;
+    --blue-mid: #2374a4;
+    --blue-dark: #144a72;
+    --blue-low: #08233c;
 
-	--shape-stroke: #002347;
-	--shape-hover: #001933;
-	--shape-base: #000f1f;
-	--shape-background: #00050a;
+    --shape-stroke: #002347;
+    --shape-hover: #001933;
+    --shape-base: #000f1f;
+    --shape-background: #00050a;
 
-	--text-title: #f8fbfb;
-	--text-body: #e2e7e9;
-	--text-label: #bac6c9;
-	
-	--ff: "Raleway", sans-serif;
+    --text-title: #f8fbfb;
+    --text-body: #e2e7e9;
+    --text-label: #bac6c9;
 
-	--title-lg: 700 3rem/auto var(--ff);
-	--title-md: 700 2.5rem/auto var(--ff);
-	--title-sm: 700 2rem/auto var(--ff);
-	--title-xs: 700 1rem/auto var(--ff);
-	--subtitle: 500 2rem/200% var(--ff);
-	
-	--text-lg: 600 1.25rem var(--ff);
-	--text-md: 600 1rem var(--ff);
-	--text-sm: 600 .875rem var(--ff);
-	--text-xs: 600 .75rem var(--ff);
+    --ff: "Raleway", sans-serif;
 
-	--text-button: 700 .875rem var(--ff);
-	--text-link: 500 .875rem var(--ff);
-	--text-tag: 700 .625rem var(--ff);
+    --title-lg: 700 3rem var(--ff);
+    --title-md: 700 2.5rem var(--ff);
+    --title-sm: 700 2rem var(--ff);
+    --title-xs: 700 1rem var(--ff);
+    --subtitle: 500 2rem/200% var(--ff);
+
+    --text-lg: 600 1.25rem var(--ff);
+    --text-md: 600 1rem var(--ff);
+    --text-sm: 600 0.875rem var(--ff);
+    --text-xs: 600 0.75rem var(--ff);
+
+    --text-button: 700 0.875rem var(--ff);
+    --text-link: 500 0.875rem var(--ff);
+    --text-tag: 700 0.625rem var(--ff);
 }
 
-button{
-	font: var(--text-button);
+body {
+    background-color: var(--shape-background);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-a{
-	color: var(--blue-light);
-	text-decoration: none;
-	font: var(--text-link);
+button {
+    all: unset;
+    appearance: none;
+    font: var(--text-button);
+	color: var(--text-title);
+	border-radius: .5rem;
 
-	&:hover{
-		color: var(--text-body);
-	}
+    &.primary {
+        background-color: var(--pink-dark);
+
+        &:hover {
+            background-color: var(--pink-base);
+        }
+    }
+
+    &.secondary {
+        background-color: var(--blue-dark);
+
+        &:hover {
+            background-color: var(--blue-base);
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+a {
+    color: var(--blue-light);
+    text-decoration: none;
+    font: var(--text-link);
+
+    &:hover {
+        color: var(--text-body);
+    }
 }
