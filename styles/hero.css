@@ -50,7 +50,7 @@
         }
     }
 
-    & > img {
+    & img[src*="hero"] {
         inset: 0;
         position: absolute;
         width: 100%;
@@ -58,6 +58,83 @@
         z-index: -1;
 
         animation: fadeIn 3s ease-in;
+    }
+
+    & img[src*="Blur"] {
+        top: 10%;
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    & .description {
+        position: relative;
+        text-align: center;
+        padding-top: 45rem;
+        width: 75rem;
+        height: 25rem;
+
+        display: block;
+
+        & img[src*="book"] {
+            bottom: 0%;
+            width: 5.5rem;
+            position: absolute;
+            rotate: 30deg;
+
+            &:hover {
+                rotate: 40deg;
+                scale: 1.1;
+                transition: rotate 800ms, scale 800ms;
+            }
+        }
+        & img[src*="ouija"] {
+            bottom: -30%;
+            left: 0%;
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            rotate: 100deg;
+            scale: 1;
+
+            &:hover {
+                rotate: 110deg;
+                scale: 1.1;
+                transition: rotate 800ms, scale 800ms;
+            }
+        }
+        & img[src*="ball"] {
+            bottom: -30%;
+            right: 0%;
+            rotate: -15deg;
+            width: 4.5rem;
+            position: absolute;
+            scale: 1;
+
+            &:hover {
+                rotate: -5deg;
+                scale: 1.1;
+                transition: rotate 800ms, scale 800ms;
+            }
+        }
+
+        & img {
+            opacity: 0;
+            scale: 0;
+
+            animation: fadeIn linear forwards, scaleUp linear forwards;
+
+            animation-timeline: view();
+            animation-range: entry 20% cover 100%;
+        }
+
+        & p {
+            font: var(--subtitle);
+            & span {
+                color: var(--blue-light);
+            }
+        }
     }
 }
 
@@ -67,5 +144,14 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
     }
 }
