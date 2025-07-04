@@ -81,12 +81,11 @@
             bottom: 0%;
             width: 5.5rem;
             position: absolute;
+
             rotate: 30deg;
 
             &:hover {
-                rotate: 40deg;
-                scale: 1.1;
-                transition: rotate 800ms, scale 800ms;
+                rotate: 45deg;
             }
         }
         & img[src*="ouija"] {
@@ -95,46 +94,110 @@
             width: 5rem;
             height: 5rem;
             position: absolute;
+
             rotate: 100deg;
-            scale: 1;
 
             &:hover {
-                rotate: 110deg;
-                scale: 1.1;
-                transition: rotate 800ms, scale 800ms;
+                rotate: 115deg;
             }
         }
         & img[src*="ball"] {
             bottom: -30%;
             right: 0%;
-            rotate: -15deg;
             width: 4.5rem;
             position: absolute;
-            scale: 1;
+
+            rotate: -15deg;
 
             &:hover {
-                rotate: -5deg;
-                scale: 1.1;
-                transition: rotate 800ms, scale 800ms;
+                rotate: 0deg;
             }
         }
 
         & img {
-            opacity: 0;
-            scale: 0;
-
-            animation: fadeIn linear forwards, scaleUp linear forwards;
-
+            animation: appear linear forwards;
             animation-timeline: view();
-            animation-range: entry 20% cover 100%;
+            animation-range: entry 200px cover 400px;
+            opacity: 0;
+
+            transition: scale 1s ease, rotate 1s ease;
+
+            &:hover {
+                scale: 1.1;
+            }
         }
 
         & p {
             font: var(--subtitle);
-            & span {
-                color: var(--blue-light);
+            opacity: 0;
+            transition: opacity 1s linear, color 1s linear;
+
+            animation: shine linear forwards;
+            animation-timeline: view();
+            animation-range: entry 200px cover 400px;
+
+            & span:nth-child(1) {
+                animation: shine linear forwards;
+                animation-timeline: view();
+                animation-range: entry 500px contain 400px;
+
+                & strong {
+                    animation: shine-blue linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 500px contain 400px;
+                }
+            }
+            & span:nth-child(2) {
+                animation: shine linear forwards;
+                animation-timeline: view();
+                animation-range: entry 300px contain 400px;
+
+                & strong {
+                    animation: shine-blue linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 300px contain 400px;
+                }
+            }
+            & span:nth-child(3) {
+                animation: shine linear forwards;
+                animation-timeline: view();
+                animation-range: entry 100px contain 400px;
+
+                & strong {
+                    animation: shine-blue linear forwards;
+                    animation-timeline: view();
+                    animation-range: entry 100px contain 400px;
+                }
             }
         }
+    }
+}
+@keyframes shine-blue {
+    0% {
+        color: inherit;
+        opacity: 0;
+    }
+    100% {
+        color: var(--blue-light);
+        opacity: 1;
+    }
+}
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -144,14 +207,5 @@
     }
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes scaleUp {
-    0% {
-        scale: 0;
-    }
-    100% {
-        scale: 1;
     }
 }
