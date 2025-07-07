@@ -102,7 +102,7 @@
 
             animation: appear ease-out both;
             animation-timeline: view();
-            animation-range: 150px 250px;
+            animation-range: 150px 300px;
             opacity: 0;
 
             rotate: 100deg;
@@ -157,12 +157,12 @@
                 opacity: 0.1;
                 animation: shine ease-out both;
                 animation-timeline: view();
-                animation-range: 350px 450px;
+                animation-range: 350px 500px;
 
                 & strong {
                     animation: shine-blue ease-out both;
                     animation-timeline: view();
-                    animation-range: 350px 450px;
+                    animation-range: 350px 500px;
                 }
             }
             & span:nth-child(3) {

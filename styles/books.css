@@ -1,0 +1,196 @@
+.books {
+    margin-top: 14.75rem;
+    padding-top: 14.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & header {
+        & h1 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font: var(--title-sm);
+            color: var(--text-title);
+
+            & img {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        p {
+            margin-top: 0.5rem;
+            text-align: center;
+            font: 400 1rem/140% var(--ff);
+            color: var(--text-body);
+        }
+    }
+
+    & .motion {
+        margin-block: 4rem;
+        width: 58.125rem;
+        height: 58.125rem;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        position: relative;
+
+        & img[src*="book.png"] {
+            /* display: none; */
+            height: 38.625rem;
+            width: auto;
+            z-index: 1;
+        }
+
+        .inner-motion {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            & .hide {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                z-index: 0;
+
+                & img[src*="-purple"] {
+                    position: absolute;
+                    height: 33.5rem;
+                    width: auto;
+                    transform: rotate(0deg);
+                    top: 24%;
+                    right: 24%;
+                    z-index: -3;
+
+                    transition: top 300ms ease-out, right 300ms ease-out,
+                        transform 300ms ease-out;
+                }
+                & img[src*="-yellow"] {
+                    position: absolute;
+                    height: 33.5rem;
+                    width: auto;
+                    top: 24%;
+                    right: 24%;
+                    transform: rotate(0deg);
+                    z-index: -2;
+
+                    transition: top 300ms ease-out, right 300ms ease-out,
+                        transform 300ms ease-out;
+                }
+                & img[src*="pin"] {
+                    position: absolute;
+                    height: auto;
+                    width: 13.875rem;
+                    bottom: 14%;
+                    left: 27%;
+                    transform: rotate(0deg);
+
+                    transition: left 300ms ease-out, bottom 300ms ease-out,
+                        transform 300ms ease-out;
+                }
+
+                & img,
+                & span {
+                    position: absolute;
+                }
+
+                & span:nth-child(5) {
+                    top: 20%;
+                    left: 30%;
+
+                    transition: top 300ms ease-out, left 300ms ease-out;
+                }
+
+                & img[src*="up"] {
+                    top: 20%;
+                    left: 30%;
+
+                    transition: top 300ms ease-out, left 300ms ease-out;
+                }
+
+                & span:nth-child(7) {
+                    right: 26%;
+                    bottom: 21%;
+
+                    transition: right 300ms ease-out, bottom 300ms ease-out;
+                }
+                & img[src*="right"] {
+                    right: 26%;
+                    bottom: 21%;
+
+                    transition: right 300ms ease-out, bottom 300ms ease-out;
+                }
+
+                & span:nth-child(9) {
+                    left: 30%;
+                    bottom: 45%;
+
+                    transition: left 300ms ease-out;
+                }
+                & img[src*="left"] {
+                    left: 30%;
+                    bottom: 30%;
+					z-index: -1;
+                    transition: left 300ms ease-out;
+                }
+            }
+        }
+
+        &:hover {
+            & .inner-motion {
+                & .hide {
+                    & img[src*="-purple"] {
+                        top: 20%;
+                        right: -1%;
+                        transform: rotate(22deg) scale(1);
+                    }
+                    & img[src*="-yellow"] {
+                        top: 7%;
+                        right: 11%;
+                        transform: rotate(12deg) scale(1);
+                    }
+                    & img[src*="pin"] {
+                        bottom: 7%;
+                        left: 10%;
+                        transform: rotate(-8deg) scale(1);
+                    }
+
+                    & span:nth-child(5) {
+                        top: 11%;
+                        left: 0;
+                        transform: scale(1);
+                    }
+                    & img[src*="up"] {
+                        top: 15%;
+                        left: 10%;
+                        transform: scale(1);
+                    }
+
+                    & span:nth-child(7) {
+                        right: 12%;
+                        bottom: 4%;
+                        transform: scale(1);
+                    }
+                    & img[src*="right"] {
+                        right: 6%;
+                        bottom: 8%;
+                        transform: scale(1);
+                    }
+
+                    & span:nth-child(9) {
+                        left: 3%;
+                        transform: scale(1);
+                    }
+                    & img[src*="left"] {
+                        left: 5%;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes cubic {
+}
