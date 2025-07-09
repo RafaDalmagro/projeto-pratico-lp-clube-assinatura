@@ -14,7 +14,7 @@
 :root {
     --pink-light: #c59dd2;
     --pink-base: #9547a5;
-    --pink-dark: #7D298A;
+    --pink-dark: #7d298a;
     --pink-low: #3f0f41;
 
     --blue-light: #73b6d2;
@@ -42,27 +42,33 @@
 
     --text-lg: 600 1.25rem var(--ff);
     --text-md: 600 1rem var(--ff);
+    --text-sx: 700 1rem var(--ff);
     --text-sm: 600 0.875rem var(--ff);
     --text-xs: 600 0.75rem var(--ff);
 
-    --text-button: 700 0.875rem var(--ff);
+    --text-button: 600 0.875rem var(--ff);
     --text-link: 500 0.875rem var(--ff);
     --text-tag: 700 0.625rem var(--ff);
 }
 
 body {
     background-color: var(--shape-background);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
     all: unset;
     appearance: none;
     font: var(--text-button);
-	color: var(--text-title);
-	border-radius: .5rem;
+    color: var(--text-title);
+    border-radius: 0.5rem;
+    padding-block: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
     &.primary {
         background-color: var(--pink-dark);
@@ -77,12 +83,18 @@ button {
 
         &:hover {
             background-color: var(--blue-base);
+            cursor: pointer;
         }
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
+}
+
+ul,
+li {
+    list-style: none;
 }
 
 a {
