@@ -36,7 +36,6 @@
         position: relative;
 
         & img[src*="book.png"] {
-            /* display: none; */
             height: 38.625rem;
             width: auto;
             z-index: 1;

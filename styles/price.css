@@ -26,7 +26,7 @@ section.price {
     & img[src*="blur"] {
         z-index: -1;
         position: absolute;
-        top: 20%;
+        top: 10%;
         object-fit: contain;
         width: auto;
         height: 100%;
@@ -54,6 +54,12 @@ section.price {
                 border-radius: 1.5rem;
                 display: flex;
                 align-items: center;
+
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+                transition: bottom 1s linear, left 1s linear, right 1s linear,
+                    top 1s linear, transform 1s linear;
 
                 & .card-content {
                     height: 100%;
@@ -127,13 +133,13 @@ section.price {
                     & .price-left {
                         & img:nth-child(1) {
                             top: -5%;
-                            left: -30%;
+                            left: -28%;
                             width: 0.875rem;
                             height: auto;
                         }
                         & img:nth-child(2) {
                             top: -15%;
-                            left: -25%;
+                            left: -28%;
                             width: 1.625rem;
                             height: auto;
                         }
@@ -141,13 +147,13 @@ section.price {
 
                     & .price-right {
                         & img:nth-child(1) {
-                            bottom: -15%;
+                            bottom: -18%;
                             right: -15%;
                             width: 0.875rem;
                             height: auto;
                         }
                         & img:nth-child(2) {
-                            bottom: -13%;
+                            bottom: -15%;
                             right: -38%;
                             width: 1.625rem;
                             height: auto;
@@ -158,9 +164,6 @@ section.price {
 
             & .card:nth-child(1) {
                 background-color: var(--shape-base);
-                left: 9%;
-                bottom: 7%;
-                transform: rotate(-8deg);
                 z-index: -1;
 
                 & h3 {
@@ -175,15 +178,33 @@ section.price {
             }
             & .card:nth-child(3) {
                 background-color: var(--shape-base);
-                right: 9%;
-                bottom: 7%;
-                transform: rotate(8deg);
                 z-index: -1;
 
                 & h3 {
                     color: var(--blue-light);
                 }
             }
+
+            &:hover {
+                & .card:nth-child(1) {
+                    left: 9%;
+                    top: 24%;
+                    transform: rotate(-8deg);
+                }
+
+                & .card:nth-child(3) {
+                    left: 64%;
+                    top: 24%;
+                    transform: rotate(8deg);
+                }
+            }
         }
+    }
+}
+
+@keyframes apeear {
+    0% {
+    }
+    100% {
     }
 }
