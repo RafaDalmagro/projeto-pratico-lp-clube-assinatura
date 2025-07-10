@@ -118,7 +118,40 @@ section.price {
                         & img {
                             position: absolute;
                         }
-                        display: none;
+                    }
+
+                    & .buny img {
+                        top: -24%;
+                    }
+
+                    & .price-left {
+                        & img:nth-child(1) {
+                            top: -5%;
+                            left: -30%;
+                            width: 0.875rem;
+                            height: auto;
+                        }
+                        & img:nth-child(2) {
+                            top: -15%;
+                            left: -25%;
+                            width: 1.625rem;
+                            height: auto;
+                        }
+                    }
+
+                    & .price-right {
+                        & img:nth-child(1) {
+                            bottom: -15%;
+                            right: -15%;
+                            width: 0.875rem;
+                            height: auto;
+                        }
+                        & img:nth-child(2) {
+                            bottom: -13%;
+                            right: -38%;
+                            width: 1.625rem;
+                            height: auto;
+                        }
                     }
                 }
             }
@@ -130,14 +163,14 @@ section.price {
                 transform: rotate(-8deg);
                 z-index: -1;
 
-				& h3{
-					color: var(--blue-light);
-				}
+                & h3 {
+                    color: var(--blue-light);
+                }
             }
             & .card:nth-child(2) {
-				& h3{
-					color: var(--pink-light);
-				}
+                & h3 {
+                    color: var(--pink-light);
+                }
                 background-color: var(--shape-base);
             }
             & .card:nth-child(3) {
@@ -147,9 +180,9 @@ section.price {
                 transform: rotate(8deg);
                 z-index: -1;
 
-				& h3{
-					color: var(--blue-light);
-				}
+                & h3 {
+                    color: var(--blue-light);
+                }
             }
         }
     }
