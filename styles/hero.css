@@ -12,8 +12,11 @@
         gap: 10rem;
         width: 70rem;
 
-        & img {
+        & .logo {
+            display: inline-block;
             height: 3.625rem;
+            width: 14.375rem;
+            background-image: url(../assets/icons/logo-horizontal.svg);
         }
 
         & nav {
@@ -41,7 +44,7 @@
                 animation: fadeIn 3s ease;
             }
             & p {
-                font: 500 1.25/140% var(--ff);
+                font: 400 1.25/140% var(--ff);
                 text-align: center;
                 width: 25rem;
                 opacity: 0;
@@ -181,7 +184,50 @@
         }
     }
 }
+@media (width <= 90rem) {
+    .hero {
+        width: 23.4375rem;
+        overflow: hidden;
+        & .header {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 100%;
 
+            & .logo {
+                height: 3rem;
+                width: 4.034375rem;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url(../assets/icons/logo-symbol.svg);
+            }
+
+            & nav {
+                padding: 1.25rem 1.25rem 0;
+            }
+            & .content {
+                gap: 1rem;
+
+                & h1 {
+                    max-width: 20.9375rem;
+                    font: 700 1.75rem var(--ff);
+                }
+                & p {
+                    font: 400 0.875rem/140% var(--ff);
+                    max-width: 20.9375rem;
+                }
+            }
+        }
+
+        & img[src*="hero"] {
+            width: auto;
+            height: 29rem;
+            left: -45%;
+            top: 0;
+        }
+    }
+}
 @keyframes shine-blue {
     0% {
         opacity: 0.8;
