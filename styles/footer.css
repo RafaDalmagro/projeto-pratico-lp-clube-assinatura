@@ -1,0 +1,66 @@
+footer {
+    height: 25.9375rem;
+    width: 90rem;
+    background-image: url(../assets/images/book-trace-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & .left {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        ul {
+            border-top: solid 1px var(--shape-stroke);
+            padding-top: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+
+            & a {
+                display: inline-block;
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 0.5rem;
+
+                background-size: contain;
+                background-repeat: no-repeat;
+                transition: background-image 100ms linear;
+                border-radius: 50%;
+            }
+            & .icon-instagram {
+                background-image: url("/assets/icons/instagram.svg");
+            }
+            & .icon-instagram:hover {
+                background-image: url("/assets/icons/instagram-hover.svg");
+                border-radius: 50%;
+				background-color: red;
+            }
+        }
+    }
+
+    & .right {
+        display: flex;
+        gap: 3.5rem;
+        padding-top: 0.5rem;
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            & span {
+                font: 700 1rem var(--ff);
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    }
+}
