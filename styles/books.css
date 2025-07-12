@@ -130,7 +130,7 @@
                 & img[src*="left"] {
                     left: 30%;
                     bottom: 30%;
-					z-index: -1;
+                    z-index: -1;
                     transition: left 300ms ease-out;
                 }
             }
@@ -184,6 +184,143 @@
                     & img[src*="left"] {
                         left: 5%;
                         transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 90rem) {
+    .books {
+        margin-top: 0;
+        padding-top: 14.75rem;
+
+        & header {
+            padding-inline: 2rem;
+
+            & h1 {
+                gap: 0.75rem;
+                font: 700 1.5rem var(--ff);
+
+                & img {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                }
+            }
+            p {
+                margin-top: 0.5rem;
+                font: 400 0.875rem/140% var(--ff);
+            }
+        }
+
+        & .motion {
+            margin-block: 4rem;
+            width: 23.4375rem;
+            height: 19.9375rem;
+
+            & img[src*="book.png"] {
+                height: 12.98rem;
+                width: auto;
+            }
+
+            .inner-motion {
+                & .hide {
+
+                    & span{
+                        font: 400 .625rem var(--ff);
+                    }
+                    & img[src*="-purple"] {
+                        height: 11.3075rem;
+                        right: 28%;
+                    }
+                    & img[src*="-yellow"] {
+                        position: absolute;
+                        height: 11.3075rem;
+                        right: 28%;
+                    }
+                    & img[src*="pin"] {
+                        height: 5.3375rem;
+                        width: auto;
+                        left: 31%;
+                    }
+
+                    & span:nth-child(5) {
+                        top: 20%;
+                        left: 33%;
+                    }
+
+                    & img[src*="up"] {
+                        top: 20%;
+                        left: 33%;
+                        height: 0.625rem;
+                        width: auto;
+                    }
+
+                    & span:nth-child(7) {
+                        right: 30%;
+                        bottom: 22%;
+                    }
+                    & img[src*="right"] {
+                        right: 30%;
+                        bottom: 21%;
+                        height: 3.1875rem;
+                        width: auto;
+                    }
+
+                    & span:nth-child(9) {
+                        left: 33%;
+                        bottom: 45%;
+                    }
+                    & img[src*="left"] {
+                        left: 33%;
+                        bottom: 30%;
+                        height: 2.671875rem;
+                        width: auto;
+                    }
+                }
+            }
+
+            &:hover {
+                & .inner-motion {
+                    & .hide {
+                        & img[src*="-purple"] {
+                            top: 20%;
+                            right: 8%;
+                        }
+                        & img[src*="-yellow"] {
+                            top: 7%;
+                            right: 17%;
+                        }
+                        & img[src*="pin"] {
+                            bottom: 8%;
+                            left: 17%;
+                        }
+
+                        & span:nth-child(5) {
+                            top: 9%;
+                            left: 8%;
+                        }
+                        & img[src*="up"] {
+                            top: 15%;
+                            left: 18%;
+                        }
+
+                        & span:nth-child(7) {
+                            right: 10%;
+                            bottom: 4%;
+                        }
+                        & img[src*="right"] {
+                            right: 13%;
+                            bottom: 11%;
+                        }
+
+                        & span:nth-child(9) {
+                            left: 8%;
+                        }
+                        & img[src*="left"] {
+                            left: 12%;
+                        }
                     }
                 }
             }
