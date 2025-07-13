@@ -58,8 +58,8 @@ section.price {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%) rotate(0deg);
-                transition: bottom 500ms linear, left 500ms linear, right 500ms linear,
-                    top 500ms linear, transform 500ms linear;
+                transition: bottom 500ms linear, left 500ms linear,
+                    right 500ms linear, top 500ms linear, transform 500ms linear;
 
                 & .card-content {
                     height: 100%;
@@ -68,11 +68,20 @@ section.price {
                     justify-content: space-between;
                     flex-direction: column;
 
-                    & div:nth-child(2) {
+                    & div:nth-child(3) {
                         display: flex;
                         flex-direction: column;
                         gap: 1.5rem;
 
+                        & span.highlight {
+                            position: absolute;
+                            right: 0;
+                            top: -1%;
+                            border-radius: 999px;
+                            padding: 0.5rem 1.25rem;
+                            background-color: var(--shape-stroke);
+                            font: 700 0.625rem var(--ff);
+                        }
                         & h3 {
                             font: var(--text-sx);
                         }
@@ -94,7 +103,7 @@ section.price {
                             }
                         }
                     }
-                    & div:nth-child(3) {
+                    & div:nth-child(4) {
                         display: flex;
                         flex-direction: column;
                         gap: 1.5rem;
@@ -105,6 +114,7 @@ section.price {
                             gap: 0.75rem;
 
                             & li {
+                                width: 14rem;
                                 display: flex;
                                 gap: 0.5rem;
                                 align-items: center;
@@ -119,45 +129,37 @@ section.price {
                         }
                     }
 
-                    & .stars,
-                    .buny {
-                        & img {
-                            position: absolute;
-                        }
-                    }
-
-                    & .buny img {
+                    & img[src*="Bunny"] {
                         top: -24%;
+                        position: absolute;
                     }
-
-                    & .price-left {
-                        & img:nth-child(1) {
-                            top: -5%;
-                            left: -28%;
-                            width: 0.875rem;
-                            height: auto;
-                        }
-                        & img:nth-child(2) {
-                            top: -15%;
-                            left: -28%;
-                            width: 1.625rem;
-                            height: auto;
-                        }
+                    & .stars-1 {
+                        position: absolute;
+                        top: -5%;
+                        left: -28%;
+                        width: 0.875rem;
+                        height: auto;
                     }
-
-                    & .price-right {
-                        & img:nth-child(1) {
-                            bottom: -18%;
-                            right: -15%;
-                            width: 0.875rem;
-                            height: auto;
-                        }
-                        & img:nth-child(2) {
-                            bottom: -15%;
-                            right: -38%;
-                            width: 1.625rem;
-                            height: auto;
-                        }
+                    & .stars-2 {
+                        position: absolute;
+                        top: -15%;
+                        left: -28%;
+                        width: 1.625rem;
+                        height: auto;
+                    }
+                    & .stars-3 {
+                        position: absolute;
+                        bottom: -18%;
+                        right: -15%;
+                        width: 0.875rem;
+                        height: auto;
+                    }
+                    & .stars-4 {
+                        position: absolute;
+                        bottom: -15%;
+                        right: -38%;
+                        width: 1.625rem;
+                        height: auto;
                     }
                 }
             }
@@ -201,7 +203,123 @@ section.price {
         }
     }
 }
+@media (width <= 90rem) {
+    section.price {
+        overflow: hidden;
+        height: 44.5rem;
+        width: 23.4375rem;
+        gap: 3rem;
 
+        & h2 {
+            font: 700 1.5rem var(--ff);
+            width: 13.8125rem;
+        }
+
+        & img[src*="pricing"] {
+            display: none;
+        }
+
+        & img[src*="blur"] {
+            display: none;
+        }
+
+        & .cards {
+            width: 23.4375rem;
+            height: 25rem;
+
+            & .motion-cards {
+                justify-content: center;
+                gap: 1rem;
+
+                & .card {
+                    position: static;
+                    height: 25rem;
+                    width: 17rem;
+                    padding: 2rem 2rem 1.75rem;
+
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    bottom: auto;
+
+                    transform: none;
+                    transition: none;
+
+                    & .card-content {
+                        & div:nth-child(3) {
+                            width: 13rem;
+                            & p {
+                                & strong {
+                                    font: var(--title-md);
+                                    & span {
+                                        font: 700 1rem var(--ff);
+                                    }
+                                }
+                            }
+                        }
+                        & div:nth-child(4) {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            & ul {
+                                & li {
+                                    display: flex;
+                                    gap: 0.5rem;
+                                    font: 400 0.75rem/140% var(--ff);
+                                }
+                            }
+                        }
+
+                        & .stars-1,
+                        & .stars-2,
+                        & .stars-3,
+                        & .stars-4,
+                        img[src*="Bunny"] {
+                            display: none;
+                        }
+
+                        & .price-right {
+                            display: none;
+                        }
+                    }
+                }
+
+                & .card:nth-child(1) {
+                    background-color: var(--shape-base);
+                    z-index: -1;
+
+                    & h3 {
+                        color: var(--blue-light);
+                    }
+                }
+                & .card:nth-child(2) {
+                    & h3 {
+                        color: var(--pink-light);
+                    }
+                    background-color: var(--shape-hover);
+                }
+                & .card:nth-child(3) {
+                    background-color: var(--shape-base);
+                    z-index: -1;
+
+                    & h3 {
+                        color: var(--blue-light);
+                    }
+                }
+
+                &:hover {
+                    .card:nth-child(1),
+                    .card:nth-child(3) {
+                        left: auto;
+                        top: auto;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
 @keyframes apeear {
     0% {
     }

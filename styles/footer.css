@@ -91,7 +91,7 @@ footer {
             & li:hover .icon-facebook {
                 background-image: url("/assets/icons/facebook-hover.svg");
             }
-            
+
             & .icon-mail {
                 background-image: url("/assets/icons/mail.svg");
             }
@@ -119,6 +119,27 @@ footer {
                 display: flex;
                 flex-direction: column;
                 gap: 0.75rem;
+            }
+        }
+    }
+}
+
+@media (width <= 90rem) {
+    footer {
+        padding: 6.125rem 2rem 2.375rem;
+        width: 23.4375rem;
+        background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+
+        & .left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            & img[src*="logo-horizontal"] {
+                height: 2.5rem;
+                width: auto;
             }
         }
     }

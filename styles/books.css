@@ -194,7 +194,7 @@
 @media (width <= 90rem) {
     .books {
         margin-top: 0;
-        padding-top: 14.75rem;
+        padding-top: 5rem;
 
         & header {
             padding-inline: 2rem;

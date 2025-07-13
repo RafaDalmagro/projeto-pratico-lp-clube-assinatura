@@ -106,3 +106,13 @@ a {
         color: var(--text-body);
     }
 }
+
+.hiden {
+    display: none;
+}
+
+@media (width <= 90rem) {
+    body {
+        
+    }
+}

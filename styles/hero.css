@@ -187,8 +187,9 @@
 @media (width <= 90rem) {
     .hero {
         width: 23.4375rem;
-        /* overflow: hidden; */
+        overflow: hidden;
         & .header {
+            padding-top: 0;
             display: flex;
             flex-direction: column;
             gap: 3rem;
@@ -228,22 +229,23 @@
         }
 
         & img[src*="Blur"] {
-            height: 120%;
+            height: 100%;
         }
         & .description {
-            padding-top: 18rem;
+            padding-top: 17rem;
             width: 100%;
             padding-inline: 1.25rem;
+            height: 35rem;
 
             & img[src*="book"] {
-                bottom: 30%;
+                top: 43%;
                 right: 20%;
                 width: 2.5rem;
                 height: 2.5rem;
 
-                animation: appear ease-out both;
-                animation-timeline: view();
-                animation-range: 300px 400px;
+                animation: none;
+                animation-timeline: none;
+                animation-range: auto;
                 opacity: 1;
 
                 rotate: 30deg;
@@ -253,14 +255,14 @@
                 }
             }
             & img[src*="ouija"] {
-                bottom: -30%;
+                bottom: 10%;
                 left: 5%;
                 width: 2.5rem;
                 height: 2.5rem;
 
-                animation: appear ease-out both;
-                animation-timeline: view();
-                animation-range: 150px 300px;
+                animation: none;
+                animation-timeline: none;
+                animation-range: auto;
                 opacity: 1;
 
                 rotate: -30deg;
@@ -270,15 +272,15 @@
                 }
             }
             & img[src*="ball"] {
-                bottom: -30%;
+                bottom: 10%;
                 right: 10%;
                 width: 2.5rem;
                 height: 2.5rem;
                 position: absolute;
 
-                animation: appear ease-out both;
-                animation-timeline: view();
-                animation-range: 250px 450px;
+                animation: none;
+                animation-timeline: none;
+                animation-range: auto;
                 opacity: 1;
 
                 rotate: 10deg;
@@ -290,10 +292,10 @@
 
             & p {
                 height: fit-content;
-            
+
                 & span,
                 & strong {
-                    font: 500 1rem/100% var(--ff)
+                    font: 500 1rem/100% var(--ff);
                 }
 
                 & span:nth-child(1) {
